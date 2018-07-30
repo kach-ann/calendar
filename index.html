@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="main.css"/>
+
+</head>
+<body>
+<h1>Calendar</h1>
+
+<div class="navigationButton">
+    <input type="button" class="button" onclick="displayPrevMonth()" value="Previous">
+    <input type="button" class="button" onclick="displayNextMonth()" value="Next">
+    <span class="dateButton" id="dateButton"></span>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" class="button">Add Event</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form onsubmit="saveEvent()">
+                <input id="eventDate" type="date"></br>
+                <textarea rows="6" cols="50" id="eventInformation"></textarea></br>
+                <button type="submit">Save</button>
+            </form>
+
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+    </thead>
+    <tbody id="grid" >
+    </tbody>
+</table>
+
+<script src="calendar.js"></script>
+</body>
+</html>
